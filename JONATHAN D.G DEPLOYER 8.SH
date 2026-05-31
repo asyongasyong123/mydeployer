@@ -512,21 +512,28 @@ cat > config.json <<EOF
     },
 
     {
+      "tag": "vmess-ws",
+
       "port": 10003,
+
       "listen": "127.0.0.1",
+
       "protocol": "vmess-jonathan",
+
       "settings": {
         "clients": [
           {
             "id": "d0aa4c72-5c9e-11f1-ab07-0242ac120002",
+
             "alterId": 0
           }
         ]
       },
       "streamSettings": {
         "network": "ws",
+
         "wsSettings": {
-          "path": "/vmess-jonathan"
+          "path": "/vmess-jonathan=2180"
         }
       }
     },
@@ -708,7 +715,7 @@ http {
 
         location /vmess-jonathan {
 
-            proxy_pass http://127.0.0.1:11004;
+            proxy_pass http://127.0.0.1:11003;
 
             proxy_http_version 1.1;
 
