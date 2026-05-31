@@ -518,7 +518,7 @@ cat > config.json <<EOF
 
       "listen": "127.0.0.1",
 
-      "protocol": "vmess-jonathan",
+      "protocol": "vmess",
 
       "settings": {
         "clients": [
