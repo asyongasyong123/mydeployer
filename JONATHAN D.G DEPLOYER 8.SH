@@ -412,133 +412,212 @@ cat > config.json <<EOF
 
   "inbounds": [
 
-    {
-      "tag": "trojan-ws",
+  Eto okay na
 
-      "port": 10001,
+{
+"log": {
+"loglevel": "warning"
+},
 
-      "listen": "127.0.0.1",
+"inbounds": [
 
-      "protocol": "trojan",
-
-      "settings": {
-        "clients": [
-          {
-            "password": "newbielangako"
-          }
-        ]
-      },
-
-      "sniffing": {
-        "enabled": true,
-        "metadataOnly": false
-      },
-
-      "streamSettings": {
-        "network": "ws",
-
-        "wsSettings": {
-          "path": "/trojan-jonathan?ed=2180"
-        }
+{
+  "tag": "trojan-ws",
+  "port": 10001,
+  "listen": "127.0.0.1",
+  "protocol": "trojan",
+  "settings": {
+    "clients": [
+      {
+        "password": "newbielangako"
       }
-    },
+    ]
+  },
+  "sniffing": {
+    "enabled": true,
+    "metadataOnly": false
+  },
+  "streamSettings": {
+    "network": "ws",
+    "wsSettings": {
+      "path": "/trojan-ws-jonathan?ed=2180"
+    }
+  }
+},
 
-    {
-      "tag": "vless-ws",
-
-      "port": 10002,
-
-      "listen": "127.0.0.1",
-
-      "protocol": "vless",
-
-      "settings": {
-        "clients": [
-          {
-            "id": "15f7e8ea-7b56-45d4-93af-31f3c592fdf1",
-
-            "level": 0,
-
-            "email": "vless-jonathan"
-          }
-        ],
-
-        "decryption": "none"
-      },
-
-      "sniffing": {
-        "enabled": true,
-        "metadataOnly": false
-      },
-
-      "streamSettings": {
-        "network": "ws",
-
-        "wsSettings": {
-          "path": "/vless-jonathan?ed=2180"
-        }
+{
+  "tag": "trojan-hu",
+  "port": 11001,
+  "listen": "127.0.0.1",
+  "protocol": "trojan",
+  "settings": {
+    "clients": [
+      {
+        "password": "newbielangako"
       }
-    },
+    ]
+  },
+  "sniffing": {
+    "enabled": true,
+    "metadataOnly": false
+  },
+  "streamSettings": {
+    "network": "httpupgrade",
+    "httpupgradeSettings": {
+      "path": "/trojan-hu-jonathan?ed=2180"
+    }
+  }
+},
 
-    {
-      "tag": "ss-hu",
-
-      "port": 11004,
-
-      "listen": "127.0.0.1",
-
-      "protocol": "shadowsocks",
-
-      "settings": {
-        "method": "chacha20-ietf-poly1305",
-
-        "password": "newbielangako",
-
-        "network": "tcp,udp"
-      },
-
-      "sniffing": {
-        "enabled": true,
-        "metadataOnly": false
-      },
-
-      "streamSettings": {
-        "network": "httpupgrade",
-
-        "httpupgradeSettings": {
-          "path": "/httpupgrade-jonathan?ed=2180"
-        }
+{
+  "tag": "vless-ws",
+  "port": 10002,
+  "listen": "127.0.0.1",
+  "protocol": "vless",
+  "settings": {
+    "clients": [
+      {
+        "id": "15f7e8ea-7b56-45d4-93af-31f3c592fdf1",
+        "level": 0,
+        "email": "vless-ws-jonathan"
       }
-    },
+    ],
+    "decryption": "none"
+  },
+  "sniffing": {
+    "enabled": true,
+    "metadataOnly": false
+  },
+  "streamSettings": {
+    "network": "ws",
+    "wsSettings": {
+      "path": "/vless-ws-jonathan?ed=2180"
+    }
+  }
+},
 
-    {
-      "tag": "vmess-ws",
-
-      "port": 10003,
-
-      "listen": "127.0.0.1",
-
-      "protocol": "vmess",
-
-      "settings": {
-        "clients": [
-          {
-            "id": "d0aa4c72-5c9e-11f1-ab07-0242ac120002",
-
-            "alterId": 0
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-
-        "wsSettings": {
-          "path": "/vmess-jonathan=2180"
-        }
+{
+  "tag": "vless-hu",
+  "port": 11002,
+  "listen": "127.0.0.1",
+  "protocol": "vless",
+  "settings": {
+    "clients": [
+      {
+        "id": "15f7e8ea-7b56-45d4-93af-31f3c592fdf1",
+        "level": 0,
+        "email": "vless-hu-jonathan"
       }
-    },
-    
-  ],
+    ],
+    "decryption": "none"
+  },
+  "sniffing": {
+    "enabled": true,
+    "metadataOnly": false
+  },
+  "streamSettings": {
+    "network": "httpupgrade",
+    "httpupgradeSettings": {
+      "path": "/vless-hu-jonathan?ed=2180"
+    }
+  }
+},
+
+{
+  "tag": "vmess-ws",
+  "port": 10003,
+  "listen": "127.0.0.1",
+  "protocol": "vmess",
+  "settings": {
+    "clients": [
+      {
+        "id": "d0aa4c72-5c9e-11f1-ab07-0242ac120002",
+        "alterId": 0
+      }
+    ]
+  },
+  "sniffing": {
+    "enabled": true,
+    "metadataOnly": false
+  },
+  "streamSettings": {
+    "network": "ws",
+    "wsSettings": {
+      "path": "/vmess-ws-jonathan?ed=2180"
+    }
+  }
+},
+
+{
+  "tag": "vmess-hu",
+  "port": 11003,
+  "listen": "127.0.0.1",
+  "protocol": "vmess",
+  "settings": {
+    "clients": [
+      {
+        "id": "d0aa4c72-5c9e-11f1-ab07-0242ac120002",
+        "alterId": 0
+      }
+    ]
+  },
+  "sniffing": {
+    "enabled": true,
+    "metadataOnly": false
+  },
+  "streamSettings": {
+    "network": "httpupgrade",
+    "httpupgradeSettings": {
+      "path": "/vmess-hu-jonathan?ed=2180"
+    }
+  }
+},
+
+{
+  "tag": "ss-ws",
+  "port": 10004,
+  "listen": "127.0.0.1",
+  "protocol": "shadowsocks",
+  "settings": {
+    "method": "chacha20-ietf-poly1305",
+    "password": "newbielangako",
+    "network": "tcp,udp"
+  },
+  "sniffing": {
+    "enabled": true,
+    "metadataOnly": false
+  },
+  "streamSettings": {
+    "network": "ws",
+    "wsSettings": {
+      "path": "/ss-ws-jonathan?ed=2180"
+    }
+  }
+},
+
+{
+  "tag": "ss-hu",
+  "port": 11004,
+  "listen": "127.0.0.1",
+  "protocol": "shadowsocks",
+  "settings": {
+    "method": "chacha20-ietf-poly1305",
+    "password": "newbielangako",
+    "network": "tcp,udp"
+  },
+  "sniffing": {
+    "enabled": true,
+    "metadataOnly": false
+  },
+  "streamSettings": {
+    "network": "httpupgrade",
+    "httpupgradeSettings": {
+      "path": "/ss-hu-jonathan?ed=2180"
+    }
+  }
+}
+
+],
 
   "outbounds": [
 
@@ -662,71 +741,145 @@ http {
             proxy_set_header Origin https://www.cloudflare.com/;
         }
 
-        location /trojan-jonathan {
+        location /trojan-ws-jonathan {
 
             proxy_pass http://127.0.0.1:10001;
 
             proxy_http_version 1.1;
 
-            proxy_set_header Upgrade \$http_upgrade;
+            proxy_set_header Upgrade $http_upgrade;
 
-            proxy_set_header Connection \$connection_upgrade;
+            proxy_set_header Connection $connection_upgrade;
 
-            proxy_set_header Host \$host;
-
-            proxy_read_timeout 86400;
-        }
-
-        location /vless-jonathan {
-
-            proxy_pass http://127.0.0.1:10002;
-
-            proxy_http_version 1.1;
-
-            proxy_set_header Upgrade \$http_upgrade;
-
-            proxy_set_header Connection \$connection_upgrade;
-
-            proxy_set_header Host \$host;
-
-            proxy_buffering off;
-
-            proxy_request_buffering off;
-
-            chunked_transfer_encoding off;
+            proxy_set_header Host $host;
 
             proxy_read_timeout 86400;
-        }
 
-        location /httpupgrade-jonathan {
+       }
 
-            proxy_pass http://127.0.0.1:11004;
+       location /trojan-hu-jonathan {
 
-            proxy_http_version 1.1;
+           proxy_pass http://127.0.0.1:11001;
 
-            proxy_set_header Upgrade \$http_upgrade;
+           proxy_http_version 1.1;
 
-            proxy_set_header Connection \$connection_upgrade;
+           proxy_set_header Upgrade $http_upgrade;
 
-            proxy_set_header Host \$host;
+           proxy_set_header Connection $connection_upgrade;
 
-            proxy_read_timeout 86400;
-        }
+           proxy_set_header Host $host;
 
-        location /vmess-jonathan {
+           proxy_read_timeout 86400;
 
-            proxy_pass http://127.0.0.1:11003;
+      }
 
-            proxy_http_version 1.1;
+      location /vless-ws-jonathan {
 
-            proxy_set_header Upgrade \$http_upgrade;
+          proxy_pass http://127.0.0.1:10002;
 
-            proxy_set_header Connection \$connection_upgrade;
+          proxy_http_version 1.1;
 
-            proxy_set_header Host \$host;
+          proxy_set_header Upgrade $http_upgrade;
 
-            proxy_read_timeout 86400;
-        }
+          proxy_set_header Connection $connection_upgrade;
+
+          proxy_set_header Host $host;
+
+          proxy_buffering off;
+
+          proxy_request_buffering off;
+
+          chunked_transfer_encoding off;
+
+          proxy_read_timeout 86400;
+
+     }
+
+     location /vless-hu-jonathan {
+
+         proxy_pass http://127.0.0.1:11002;
+
+         proxy_http_version 1.1;
+
+         proxy_set_header Upgrade $http_upgrade;
+
+         proxy_set_header Connection $connection_upgrade;
+
+         proxy_set_header Host $host;
+
+         proxy_buffering off;
+
+         proxy_request_buffering off;
+
+         chunked_transfer_encoding off;
+
+         proxy_read_timeout 86400;
+
+     }
+
+     location /vmess-ws-jonathan {
+
+         proxy_pass http://127.0.0.1:10003;
+
+         proxy_http_version 1.1;
+
+         proxy_set_header Upgrade $http_upgrade;
+
+         proxy_set_header Connection $connection_upgrade;
+
+         proxy_set_header Host $host;
+
+        bproxy_read_timeout 86400;
+
+     }
+
+     location /vmess-hu-jonathan {
+
+          proxy_pass http://127.0.0.1:11003;
+
+          proxy_http_version 1.1;
+
+          proxy_set_header Upgrade $http_upgrade;
+
+          proxy_set_header Connection $connection_upgrade;
+
+          proxy_set_header Host $host;
+
+          proxy_read_timeout 86400;
+
+     }
+
+     location /ss-ws-jonathan {
+
+         proxy_pass http://127.0.0.1:10004;
+
+         proxy_http_version 1.1;
+
+         proxy_set_header Upgrade $http_upgrade;
+
+         proxy_set_header Connection $connection_upgrade;
+
+         proxy_set_header Host $host;
+
+         proxy_read_timeout 86400;
+
+     }
+
+    location /ss-hu-jonathan {
+
+        proxy_pass http://127.0.0.1:11004;
+
+        proxy_http_version 1.1;
+
+        proxy_set_header Upgrade $http_upgrade;
+
+        proxy_set_header Connection $connection_upgrade;
+
+        proxy_set_header Host $host;
+
+        proxy_read_timeout 86400;
+
+      }
     }
 }
 EOF
@@ -881,7 +1034,20 @@ echo "newbielangako"
 echo ""
 
 echo -e "${GREEN}PATH:${NC}"
-echo "/trojan-jonathan"
+echo "/trojan-ws-jonathan"
+echo ""
+
+echo -e "${CYAN}=========================================${NC}"
+echo -e "${GREEN}TROJAN HU${NC}"
+echo -e "${CYAN}=========================================${NC}"
+echo ""
+
+echo -e "${GREEN}PASSWORD:${NC}"
+echo "newbielangako"
+echo ""
+
+echo -e "${GREEN}PATH:${NC}"
+echo "/trojan-hu-jonathan"
 echo ""
 
 echo -e "${CYAN}=========================================${NC}"
@@ -894,11 +1060,24 @@ echo "15f7e8ea-7b56-45d4-93af-31f3c592fdf1"
 echo ""
 
 echo -e "${GREEN}PATH:${NC}"
-echo "/vless-jonathan"
+echo "/vless-ws-jonathan"
 echo ""
 
 echo -e "${CYAN}=========================================${NC}"
-echo -e "${GREEN}SHADOWSOCKS HTTPUPGRADE${NC}"
+echo -e "${GREEN}VLESS HU${NC}"
+echo -e "${CYAN}=========================================${NC}"
+echo ""
+
+echo -e "${GREEN}UUID:${NC}"
+echo "15f7e8ea-7b56-45d4-93af-31f3c592fdf1"
+echo ""
+
+echo -e "${GREEN}PATH:${NC}"
+echo "/vless-hu-jonathan"
+echo ""
+
+echo -e "${CYAN}=========================================${NC}"
+echo -e "${GREEN}SHADOWSOCKS WS${NC}"
 echo -e "${CYAN}=========================================${NC}"
 echo ""
 
@@ -911,7 +1090,24 @@ echo "chacha20-ietf-poly1305"
 echo ""
 
 echo -e "${GREEN}PATH:${NC}"
-echo "/httpupgrade-jonathan"
+echo "/ss-ws-jonathan"
+echo ""
+
+echo -e "${CYAN}=========================================${NC}"
+echo -e "${GREEN}SHADOWSOCKS HU${NC}"
+echo -e "${CYAN}=========================================${NC}"
+echo ""
+
+echo -e "${GREEN}PASSWORD:${NC}"
+echo "newbielangako"
+echo ""
+
+echo -e "${GREEN}METHOD:${NC}"
+echo "chacha20-ietf-poly1305"
+echo ""
+
+echo -e "${GREEN}PATH:${NC}"
+echo "/ss-hu-jonathan"
 echo ""
 
 echo -e "${CYAN}=========================================${NC}"
@@ -924,7 +1120,20 @@ echo "d0aa4c72-5c9e-11f1-ab07-0242ac120002"
 echo ""
 
 echo -e "${GREEN}PATH:${NC}"
-echo "/vmess-jonathan"
+echo "/vmess-ws-jonathan"
+echo ""
+
+echo -e "${CYAN}=========================================${NC}"
+echo -e "${GREEN}VMESS HU${NC}"
+echo -e "${CYAN}=========================================${NC}"
+echo ""
+
+echo -e "${GREEN}UUID:${NC}"
+echo "d0aa4c72-5c9e-11f1-ab07-0242ac120002"
+echo ""
+
+echo -e "${GREEN}PATH:${NC}"
+echo "/vmess-hu-jonathan"
 echo ""
 
 echo -e "${CYAN}=========================================${NC}"
