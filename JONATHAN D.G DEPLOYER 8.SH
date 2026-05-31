@@ -406,15 +406,6 @@ cd "$BUILD_DIR" || exit 1
 
 cat > config.json <<EOF
 {
-  "log": {
-    "loglevel": "warning"
-  },
-
-  "inbounds": [
-
-  Eto okay na
-
-{
 "log": {
 "loglevel": "warning"
 },
@@ -619,7 +610,7 @@ cat > config.json <<EOF
 
 ],
 
-  "outbounds": [
+  "outbounds":[
 
     {
       "protocol": "freedom",
@@ -829,7 +820,7 @@ http {
 
          proxy_set_header Host $host;
 
-        bproxy_read_timeout 86400;
+         proxy_read_timeout 86400;
 
      }
 
